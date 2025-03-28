@@ -1,2 +1,7 @@
+from .server import serve
+
+
 def main():
-    print("Hello, world!")
+    """MCP Server Template - Main Entry Point"""
+    print("Starting MCP Server Template...")
+    serve()
