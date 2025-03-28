@@ -3,7 +3,8 @@ from typing import Annotated
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 
-mcp = FastMCP("MCP Server Template")
+# https://github.com/jlowin/fastmcp/issues/81#issuecomment-2714245145
+mcp = FastMCP("MCP Server Template", log_level="ERROR")
 
 
 @mcp.tool()
