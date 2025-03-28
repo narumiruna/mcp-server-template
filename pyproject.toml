@@ -1,28 +1,21 @@
 [project]
-name = "python-template"
+name = "mcp-server-template"
 version = "0.1.0"
 description = ""
 readme = "README.md"
 authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
 requires-python = ">=3.12"
-dependencies = [
-    "loguru>=0.7.3",
-]
+dependencies = ["loguru>=0.7.3"]
 
 [project.scripts]
-python-template = "python_template.cli:main"
+mcp-server-template = "mcp_server_template.cli:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = [
-    "mypy>=1.13.0",
-    "pytest>=8.3.3",
-    "pytest-cov>=6.0.0",
-    "ruff>=0.7.3",
-]
+dev = ["mypy>=1.13.0", "pytest>=8.3.3", "pytest-cov>=6.0.0", "ruff>=0.7.3"]
 
 [tool.ruff]
 exclude = ["build"]
