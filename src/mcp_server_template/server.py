@@ -16,5 +16,5 @@ def add_numbers(
     return f"{a} + {b} = {a+b} from MCP Template"
 
 
-def serve():
+def main():
     mcp.run()

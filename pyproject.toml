@@ -8,7 +8,7 @@ requires-python = ">=3.12"
 dependencies = ["loguru>=0.7.3", "mcp>=1.6.0"]
 
 [project.scripts]
-mcp-server-template = "mcp_server_template.cli:main"
+mcp-server-template = "mcp_server_template.server:main"
 
 [build-system]
 requires = ["hatchling"]
