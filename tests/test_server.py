@@ -10,7 +10,7 @@ def server_params() -> StdioServerParameters:
 
 
 @pytest.anyio
-async def test_list_tools(server_params) -> StdioServerParameters:
+async def test_list_tools(server_params: StdioServerParameters) -> None:
     async with stdio_client(server_params) as (read, write), ClientSession(read, write) as session:
         result = await session.list_tools()
         assert len(result.tools) > 0
