@@ -4,8 +4,6 @@ from mcp import StdioServerParameters
 from mcp import stdio_client
 from mcp.types import TextContent
 
-from mcpservertemplate.server import add_numbers
-
 
 @pytest.fixture
 def server_params() -> StdioServerParameters:
