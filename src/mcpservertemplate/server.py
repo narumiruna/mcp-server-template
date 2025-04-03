@@ -13,7 +13,7 @@ def add_numbers(
     b: Annotated[float, Field(description="The second number")],
 ) -> str:
     """Add two numbers and return the result as a string."""
-    return f"{a} + {b} = {a+b} from MCP Template"
+    return str(a + b)
 
 
 def main():
