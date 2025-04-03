@@ -5,12 +5,12 @@
 ```json
 {
   "mcpServers": {
-    "mcp-server-template": {
+    "mcpservertemplate": {
       "command": "uvx",
       "args": [
         "--from",
         "git+https://github.com/narumiruna/mcp-server-template",
-        "mcp-server-template"
+        "mcpservertemplate"
       ]
     }
   }
@@ -22,9 +22,9 @@
 ```json
 {
   "mcpServers": {
-    "mcp-server-template": {
+    "mcpservertemplate": {
       "command": "uvx",
-      "args": ["mcp-server-template"]
+      "args": ["mcpservertemplate"]
     }
   }
 }
@@ -35,13 +35,13 @@
 ```json
 {
   "mcpServers": {
-    "mcp-server-template": {
+    "mcpservertemplate": {
       "command": "uv",
       "args": [
         "run",
         "--directory",
         "/home/<user>/workspace/mcp-server-template",
-        "mcp-server-template"
+        "mcpservertemplate"
       ]
     }
   }
