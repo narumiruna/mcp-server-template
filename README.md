@@ -24,7 +24,7 @@
   "mcpServers": {
     "mcpservertemplate": {
       "command": "uvx",
-      "args": ["-U", "mcpservertemplate"]
+      "args": ["mcpservertemplate@latest"]
     }
   }
 }
