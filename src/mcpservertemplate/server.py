@@ -16,5 +16,5 @@ def add_numbers(
     return str(a + b)
 
 
-def main():
+def main() -> None:
     mcp.run()
