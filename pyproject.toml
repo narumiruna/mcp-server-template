@@ -3,8 +3,8 @@ name = "mcpservertemplate"
 version = "0.0.0"
 description = ""
 readme = "README.md"
-authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
 requires-python = ">=3.12"
+authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
 dependencies = ["loguru>=0.7.3", "mcp[cli]>=1.6.0"]
 
 [project.scripts]
@@ -16,12 +16,11 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "mypy>=1.17.1",
-    "pip>=25.2",
-    "pytest>=8.4.1",
-    "pytest-asyncio>=1.1.0",
-    "pytest-cov>=6.2.1",
-    "ruff>=0.12.7",
+  "pip>=25.2",
+  "pytest>=8.4.1",
+  "pytest-asyncio>=1.1.0",
+  "pytest-cov>=6.2.1",
+  "ruff>=0.12.7",
 ]
 
 [tool.ruff]
@@ -30,15 +29,15 @@ line-length = 120
 
 [tool.ruff.lint]
 select = [
-    "B",   # flake8-bugbear
-    "C",   # flake8-comprehensions
-    "E",   # pycodestyle errors
-    "F",   # pyflakes
-    "I",   # isort
-    "N",   # pep8-naming
-    "SIM", # flake8-simplify
-    "UP",  # pyupgrade
-    "W",   # pycodestyle warnings
+  "B",  # flake8-bugbear
+  "C",  # flake8-comprehensions
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort
+  "N",  # pep8-naming
+  "SIM",  # flake8-simplify
+  "UP",  # pyupgrade
+  "W",  # pycodestyle warnings
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -49,9 +48,6 @@ force-single-line = true
 
 [tool.pytest.ini_options]
 filterwarnings = ["ignore::DeprecationWarning"]
-
-[tool.mypy]
-ignore_missing_imports = true
 
 [tool.bumpversion]
 current_version = "0.0.0"
