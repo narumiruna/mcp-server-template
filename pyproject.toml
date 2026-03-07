@@ -1,18 +1,14 @@
 [project]
-name = "mcpservertemplate"
-version = "0.0.0"
-description = ""
-readme = "README.md"
+name            = "mcpservertemplate"
+version         = "0.0.0"
+description     = ""
+readme          = "README.md"
 requires-python = ">=3.12"
-authors = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
-dependencies = ["loguru>=0.7.3", "mcp[cli]>=1.6.0"]
+authors         = [{ name = "narumi", email = "toucans-cutouts0f@icloud.com" }]
+dependencies    = ["loguru>=0.7.3", "mcp[cli]>=1.6.0"]
 
 [project.scripts]
 mcpservertemplate = "mcpservertemplate.server:main"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
@@ -24,21 +20,50 @@ dev = [
   "ty>=0.0.9",
 ]
 
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.bumpversion]
+current_version  = "0.0.0"
+tag              = true
+commit           = true
+pre_commit_hooks = ["uv lock", "git add uv.lock"]
+
+[tool.pytest]
+filterwarnings = ["ignore::DeprecationWarning"]
+
 [tool.ruff]
-exclude = ["build"]
 line-length = 120
 
 [tool.ruff.lint]
 select = [
-  "B",  # flake8-bugbear
-  "C",  # flake8-comprehensions
-  "E",  # pycodestyle errors
-  "F",  # pyflakes
-  "I",  # isort
-  "N",  # pep8-naming
-  "SIM",  # flake8-simplify
-  "UP",  # pyupgrade
-  "W",  # pycodestyle warnings
+  "ANN",     # flake8-annotations
+  "ASYNC",   # flake8-async
+  "B",       # flake8-bugbear
+  "BLE",     # flake8-blind-except
+  "C",       # flake8-comprehensions
+  "DTZ",     # flake8-datetimez
+  "E",       # pycodestyle errors
+  "F",       # pyflakes
+  "FURB",    # refurb
+  "I",       # isort
+  "G",       # flake8-logging-format
+  "N",       # pep8-naming
+  "PERF",    # perflint
+  "PIE",     # flake8-pie
+  "PTH",     # flake8-use-pathlib
+  "RET",     # flake8-return
+  "RSE",     # flake8-raise
+  "RUF",     # ruff-specific rules
+  "SIM",     # flake8-simplify
+  "TID",     # flake8-tidy-imports
+  "TRY002",  # raise-vanilla-class
+  "TRY004",  # type-check-without-type-error
+  "TRY203",  # useless-try-except
+  "TRY300",  # try-consider-else
+  "UP",      # pyupgrade
+  "W",       # pycodestyle warnings
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -47,11 +72,6 @@ select = [
 [tool.ruff.lint.isort]
 force-single-line = true
 
-[tool.pytest.ini_options]
-filterwarnings = ["ignore::DeprecationWarning"]
-
-[tool.bumpversion]
-current_version = "0.0.0"
-tag = true
-commit = true
-pre_commit_hooks = ["uv lock", "git add uv.lock"]
+[tool.tombi.format.rules]
+key-value-equals-sign-alignment = true
+trailing-comment-alignment      = true
